@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIGC×美业数智新生态招商手册 - 第67届中国国际美博会</title>
+    <meta name="description" content="第67届中国(上海)国际美博会AI美业应用展区招商手册，展示AIGC技术赋能美业全链路的垂直展区信息">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fce9ed',
+                            100: '#f7d0d7',
+                            200: '#efb4bf',
+                            300: '#e6899c',
+                            400: '#de4564',
+                            500: '#d21e42',
+                            600: '#aa1331',
+                            700: '#970c28',
+                            800: '#79061d',
+                            900: '#530414'
+                        },
+                        secondary: {
+                            50: '#dbfcf5',
+                            100: '#c1f7ec',
+                            200: '#a4f1e1',
+                            300: '#77ead3',
+                            400: '#2fe6c1',
+                            500: '#13cfa9',
+                            600: '#0aa585',
+                            700: '#059074',
+                            800: '#01715a',
+                            900: '#01483a'
+                        },
+                        neutral: {
+                            50: '#ffffff',
+                            100: '#ffffff',
+                            200: '#ffffff',
+                            300: '#ffffff',
+                            400: '#f3f2f2',
+                            500: '#ddd5d8',
+                            600: '#c9b6bd',
+                            700: '#c2a3af',
+                            800: '#b9899b',
+                            900: '#aa6f85'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"PingFang SC"', '"Microsoft YaHei"', 'sans-serif']
+                    },
+                    borderRadius: {
+                        DEFAULT: '4px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Preline UI CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@preline/plugin@1.0.0/dist/preline.css">
+    <script src="https://cdn.jsdelivr.net/npm/@preline/plugin@1.0.0/dist/preline.js"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-scale {
+            transition: transform 0.2s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: rgba(210, 30, 66, 0.3);
+        }
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(210, 30, 66, 0.2);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #d21e42, #13cfa9);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-neutral-50 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200 transition-colors duration-300">
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-neutral-800/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <img src="https://www.chinainternationalbeauty.com/static/icon/nav-logo.svg" alt="美博会logo" class="h-8 w-auto rounded">
+                        <span class="ml-3 text-xl font-semibold text-primary-600 dark:text-primary-400">AI美业应用展区</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#overview" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">展区概览</a>
+                    <a href="#value" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">核心价值</a>
+                    <a href="#recruitment" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">展商招募</a>
+                    <a href="#benefits" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">展区权益</a>
+                    <a href="#activities" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">配套活动</a>
+                    <a href="#policy" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">招商政策</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button id="mobile-theme-toggle" class="p-2 ml-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 移动菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-neutral-800 border-t border-neutral-200 dark:border-neutral-700">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#overview" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">展区概览</a>
+                <a href="#value" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">核心价值</a>
+                <a href="#recruitment" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">展商招募</a>
+                <a href="#benefits" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">展区权益</a>
+                <a href="#activities" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">配套活动</a>
+                <a href="#policy" class="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700">招商政策</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 英雄区域 -->
+    <header class="relative bg-gradient-to-r from-primary-600 to-secondary-500 text-white overflow-hidden fade-in">
+        <div class="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">AIGC×美业数智新生态</h1>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed">美业正经历一场AI驱动的效率革命，中国国际美博会——36年沉淀的航母级美业生态中枢，正是您技术落地的黄金试验场。</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#recruitment" class="bg-white text-primary-600 px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all btn-hover">立即参展</a>
+                    <a href="#activities" class="bg-white/20 border border-white px-6 py-3 rounded-md font-medium hover:bg-white/30 transition-all btn-hover">查看活动</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[url('https://china-beauty.oss-cn-shenzhen.aliyuncs.com/picture/cq2dy45ibqdox0fd35w4kb11.JPG')] bg-cover bg-center"></div>
+        </div>
+    </header>
+    
+    <!-- 展会基本信息 -->
+    <section class="py-12 bg-white dark:bg-neutral-800 fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 rounded-xl p-6 md:p-8 shadow-sm border border-neutral-200 dark:border-neutral-700">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-calendar-alt text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">举办时间</h3>
+                            <p class="mt-1 text-neutral-600 dark:text-neutral-400">2025年6月24-26日</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">举办地点</h3>
+                            <p class="mt-1 text-neutral-600 dark:text-neutral-400">国家会展中心（上海）</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-users text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">主办单位</h3>
+                            <p class="mt-1 text-neutral-600 dark:text-neutral-400">第67届中国（上海）国际美博会</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 展区概览 -->
+    <section id="overview" class="py-16 bg-neutral-50 dark:bg-neutral-900/50 fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">展区概览</h2>
+                <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">聚焦AIGC技术赋能美业，一站式覆盖"技术展示-需求对接-商业落地-生态共建"</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">主题定位</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400">美博会-AI美业应用展区，聚焦AIGC技术赋能美业全链路的垂直展区</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">场景体验</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400">"AI改造工坊"—应用展区+实战课程，沉浸式体验AI技术如何改变美业</p>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">商业价值</h3>
+                            <p class="mt-2 text-neutral-600 dark:text-neutral-400">1份展位费=300次地推，AI工具转化效率提升10倍，快速验证市场需求</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                    <img src="https://china-beauty.oss-cn-shenzhen.aliyuncs.com/picture/xc18enc0kd1377gwgsxnnddk.jpg" alt="AI美业应用展区" class="w-full h-auto object-cover hover-scale">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 核心价值 -->
+    <section id="value" class="py-16 bg-white dark:bg-neutral-800 fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 section-title">核心价值</h2>
+                <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">AI技术赋能美业，创造多方共赢的商业生态</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 对AIGC展商 -->
+                <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="ml-3 text-lg font-semibold">对AIGC展商</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex">
+                            <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                            <span>精准获客：直达美业品牌/供应链/渠道门店决策者</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>权威背书：颁发中国国际美博会"生态伙伴"认证证书</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>长效曝光：入驻365天线上对接平台（美博会AI服务商黄页）</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 对美业B端观众 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">对美业B端观众</h3>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>零距离接触前沿AI工具，了解行业趋势</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>解决经营痛点，提升运营效率</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>获得数字化转型方法论，抢占市场先机</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 对行业 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">对行业</h3>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>输出《AIGC美业应用白皮书》，推动技术标准建立</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>输出《AIGC美业案例库》，开放供需智能匹配</span>
+                    </li>
+                    <li class="flex">
+                        <i class="fas fa-check text-secondary-500 mt-1 mr-2"></i>
+                        <span>成立"AIGC美业联盟"，实现成员资源互哺与商业共生</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+            <img src="https://china-beauty.oss-cn-shenzhen.aliyuncs.com/picture/ygjs0bk6yqx6ujybyuoaw0z4.jpg" alt="AIGC美业应用场景" class="w-full h-auto object-cover hover-scale">
+        </div>
+    </div>
+</section>
+
+<!-- 展商招募计划 -->
+<section  id="policy" class="py-16 bg-neutral-50 dark:bg-neutral-900/50 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 section-title">展商招募</h2>
+            <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">面向AI技术与美业结合的创新企业，共同打造数智美业新生态</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- AI创业者 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">AI创业工作室</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">私域工具、AI自媒体、AI培训咨询机构等</p>
+            </div>
+
+            <!-- 技术提供方 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">技术提供方</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">AI营销工具（图文/视频/设计）、智能客服、数据分析服务商等</p>
+            </div>
+
+            <!-- 解决方案商 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">解决方案商</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">美业SaaS、AI+CRM/ERP系统、虚拟试妆技术公司</p>
+            </div>
+
+            <!-- 资源支持方 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">资源支持方</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">模型基座服务商、模型应用服务商、AI投资机构</p>
+            </div>
+
+            <!-- 流量赋能方 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">流量赋能方</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">AI应用整合平台、媒体服务商、AI直播技术供应商</p>
+            </div>
+
+            <!-- 客户实例 -->
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="ml-3 text-lg font-semibold">成功案例</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">万美京-成交导流机器人已两届冠名美博会</p>
+            </div>
+        </div>
+
+        <div class="mt-12 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+            <img src="https://china-beauty.oss-cn-shenzhen.aliyuncs.com/picture/wrwy80xs2c6nuvblpa4d0o2m.jpg" alt="展商招募" class="w-full h-auto object-cover hover-scale">
+        </div>
+    </div>
+</section>
+
+<!-- 参展亮点 -->
+<section id="benefits" class="py-16 bg-white dark:bg-neutral-800 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 section-title">参展亮点</h2>
+            <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">全方位赋能展商，最大化参展价值</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 行业认证 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-award text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">行业认证</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">颁发中国国际美博会"AIGC生态伙伴"证书，提升品牌公信力，可用于市场宣传推广</p>
+            </div>
+
+            <!-- 精准流量包 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">精准流量包</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">根据展商标签（如"AI获客"）精准匹配美业买家资源，确保参展投资ROI</p>
+            </div>
+
+            <!-- 媒体矩阵曝光 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-bullhorn text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">媒体矩阵曝光</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">提供分层级媒体资源覆盖：专属专访+入选《AIGC美业白皮书》或案例入选《案例库》+垂直媒体软文推广</p>
+            </div>
+
+            <!-- 场景化展示 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-desktop text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">场景化展示</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">提供"AI美业应用展区"标准展位，实时演示AI工具使用效果，增强观众互动体验</p>
+            </div>
+
+            <!-- 长效入口 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-door-open text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">长效入口</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">入驻"AIGC美业对接平台"（小程序/H5），享受365天持续需求推送及线上展商黄页展示</p>
+            </div>
+
+            <!-- 商业共生 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-12 w-12 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-handshake text-xl"></i>
+                    </div>
+                    <h3 class="ml-3 text-xl font-semibold">商业共生</h3>
+                </div>
+                <p class="text-neutral-600 dark:text-neutral-400">加入中国国际美博会"AIGC美业联盟"，成为AI实战训练营导师，为美业企业家授课AI知识</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 展区活动 -->
+<section id="activities" class="py-16 bg-neutral-50 dark:bg-neutral-900/50 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 section-title">展区活动</h2>
+            <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">AI改造工坊-实战教学AI在美业应用</p>
+        </div>
+
+        <!-- 6月24日活动 -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">6月24日（制造研发品牌专场）</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 上午活动 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4 class="ml-3 text-lg font-semibold">10:00-12:00｜制造研发篇</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">1</span>
+                            <span>《AI智造爆品配方：3天打造下一个"成分党"网红》</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">2</span>
+                            <span>《包装设计革命：AI一键生成1000+"国潮"方案，客户选中率翻倍》</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 下午活动 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h4 class="ml-3 text-lg font-semibold">13:30-16:00｜品牌营销篇</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">1</span>
+                            <span>《0基础生成爆款内容：用AI克隆"李佳琦话术"，抖音ROI提升200%》</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">2</span>
+                            <span>《流量精准狙击术：AI锁定"高净值客户"，投放成本直降50%》</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6月25日活动 -->
+        <div class="mb-12">
+            <h3 class="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">6月25日（品牌渠道经营专场）</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 上午活动 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4 class="ml-3 text-lg font-semibold">10:00-12:00｜品牌打造篇</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">1</span>
+                            <span>《虚拟偶像诞生记：0成本打造品牌"AI代言人"，小红书月增粉10万+》</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">2</span>
+                            <span>《中小品牌逆袭密码：AI挖掘"百亿赛道"空白区，定位快准狠》</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 下午活动 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <h4 class="ml-3 text-lg font-semibold">13:30-16:00｜渠道经营篇</h4>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">1</span>
+                            <span>《选品不再"赌概率"：AI预测区域爆款，库存周转提速40%》</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">2</span>
+                            <span>《AI获客黑科技实战》</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6月26日活动 -->
+        <div>
+            <h3 class="text-2xl font-semibold mb-6 text-primary-600 dark:text-primary-400">6月26日（全链路必修专场）</h3>
+            <div class="bg-white dark:bg-neutral-800 p-6 rounded-xl border border-neutral-200 dark:border-neutral-700 card-hover">
+                <div class="flex items-center mb-4">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-primary-100 dark:bg-primary-900/20 flex items-center justify-center text-primary-600 dark:text-primary-400">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="ml-3 text-lg font-semibold">10:00-12:00｜综合篇</h4>
+                </div>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-secondary-100 dark:bg-secondary-900/20 text-secondary-600 dark:text-secondary-400 mr-3 mt-1 flex-shrink-0">1</span>
+                        <span>《美业老板必修课：从研发到门店，用AI砍掉30%成本的真实案例》</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-12 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+            <img src="https://china-beauty.oss-cn-shenzhen.aliyuncs.com/picture/40/0e9021e4bd2d41a5a40905801cb65d9a.jpg" alt="配套活动" class="w-full h-auto object-cover hover-scale">
+        </div>
+    </div>
+</section>
+
+<!-- 招商政策 -->
+<section  id="recruitment"  class="py-16 bg-white dark:bg-neutral-800 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 section-title">招商政策</h2>
+            <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">多种权益方案，满足不同类型企业的需求</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 基础权益包 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-8 rounded-xl border-2 border-primary-200 dark:border-primary-800 card-hover">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2">基础权益包</h3>
+                    <p class="text-3xl font-semibold">1万元</p>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
+                        <span>行业认证：颁发美博会「AIGC美业生态伙伴」</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
+                        <span>基础曝光：展会小程序「服务商黄页」基础展示</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
+                        <span>权威背书：入选《AIGC美业案例集》</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
+                        <span>精准对接：美博会AI美业应用展区9㎡标准展位1个</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-primary-500 mt-1 mr-3"></i>
+                        <span>成为中国国际美博会AIGC美业生态联盟副秘书长单位</span>
+                    </li>
+                </ul>
+                <div class="mt-8 text-center">
+                    <a href="#contact" class="inline-block bg-primary-500 text-white px-6 py-3 rounded-md font-medium hover:bg-primary-600 transition-all btn-hover">立即咨询</a>
+                </div>
+            </div>
+
+            <!-- 定制权益包 -->
+            <div class="bg-neutral-50 dark:bg-neutral-700/30 p-8 rounded-xl border-2 border-secondary-200 dark:border-secondary-800 card-hover">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-secondary-600 dark:text-secondary-400 mb-2">定制权益包</h3>
+                    <p class="text-3xl font-semibold">8万元</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">包含基础权益包所有权益，另加以下权益</p>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3"></i>
+                        <span>美博会AI美业应用展区9㎡标准展位3个</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3"></i>
+                        <span>官方公众号（图文推送一次)，触达100万+垂直用户</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3"></i>
+                        <span>联合发布《AIGC美业应用蓝皮书》</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3"></i>
+                        <span>美博会课程/论坛演讲席位（20分钟技术分享）</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-secondary-500 mt-1 mr-3"></i>
+                        <span>保障对接20+美业有效客户（需提前提交客户画像）</span>
+                    </li>
+                </ul>
+                <div class="mt-8 text-center">
+                    <a href="#contact" class="inline-block bg-secondary-500 text-white px-6 py-3 rounded-md font-medium hover:bg-secondary-600 transition-all btn-hover">立即咨询</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 参展建议 -->
+        <div class="mt-16 bg-neutral-50 dark:bg-neutral-700/30 p-8 rounded-xl border border-neutral-200 dark:border-neutral-700">
+            <h3 class="text-2xl font-semibold mb-6 text-center">参展建议</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 初创公司 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                    <h4 class="text-lg font-semibold mb-3 text-primary-600 dark:text-primary-400">初创公司</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">推荐权益包：</p>
+                    <p class="font-medium mb-3">基础权益包</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">核心价值点：</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">低成本高效获客</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">快速验证市场需求</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 成长型技术商 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                    <h4 class="text-lg font-semibold mb-3 text-primary-600 dark:text-primary-400">成长型技术商</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">推荐权益包：</p>
+                    <p class="font-medium mb-3">定制权益包</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">核心价值点：</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">建立行业权威形象</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">精准对接规模化客户资源</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 头部企业/独角兽 -->
+                <div class="bg-white dark:bg-neutral-800 p-6 rounded-lg border border-neutral-200 dark:border-neutral-700">
+                    <h4 class="text-lg font-semibold mb-3 text-primary-600 dark:text-primary-400">头部企业/独角兽</h4>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">推荐权益包：</p>
+                    <p class="font-medium mb-3">定制权益包</p>
+                    <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-2">核心价值点：</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">抢占生态关键卡位</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-primary-500 text-xs mt-1 mr-2"></i>
+                            <span class="text-sm">参与制定赛道规则</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA区域 -->
+<section class="py-16 bg-gradient-to-r from-primary-600 to-secondary-500 text-white fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">第67届中国国际美博会AI应用展区</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">不是一场普通展会——这是您打开美业AI商业化大门的唯一密钥。此刻入场，即是未来三年的生态领跑者。</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#contact" class="bg-white text-primary-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition-all btn-hover">立即咨询参展</a>
+            <a href="tel:18680558942" class="bg-white/20 border border-white px-8 py-4 rounded-md font-semibold hover:bg-white/30 transition-all btn-hover">电话咨询</a>
+        </div>
+    </div>
+</section>
+
+<!-- 联系信息 -->
+<section id="contact" class="py-16 bg-neutral-50 dark:bg-neutral-900/50 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4 section-title">联系老黄18680558942</h2>
+            <p class="max-w-3xl mx-auto text-lg text-neutral-600 dark:text-neutral-400">官网www.cibe.cn获取更多展会信息</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 联系人信息 -->
+            <div class="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700">
+                <h3 class="text-xl font-semibold mb-6">
